@@ -20,7 +20,8 @@ class LegalRow extends StatelessWidget {
               onTap: () async {
                 final ChromeSafariBrowser browser = ChromeSafariBrowser();
                 await browser.open(
-                    url: WebUri.uri(Uri.parse(PaywallData.of(context).tosData!.url)),
+                    url: WebUri.uri(
+                        WebUri(PaywallData.of(context).tosData!.url)),
                     options: ChromeSafariBrowserClassOptions(
                         android: AndroidChromeCustomTabsOptions(),
                         ios: IOSSafariOptions(barCollapsingEnabled: true)));
@@ -31,7 +32,8 @@ class LegalRow extends StatelessWidget {
                     decoration: TextDecoration.underline,
                     color: Theme.of(context).textTheme.labelLarge?.color ??
                         Theme.of(context).primaryColor,
-                    fontStyle: Theme.of(context).textTheme.bodySmall!.fontStyle),
+                    fontStyle:
+                        Theme.of(context).textTheme.bodySmall!.fontStyle),
               ),
             ),
           ),
@@ -53,7 +55,8 @@ class LegalRow extends StatelessWidget {
                     decoration: TextDecoration.underline,
                     color: Theme.of(context).textTheme.labelLarge?.color ??
                         Theme.of(context).primaryColor,
-                    fontStyle: Theme.of(context).textTheme.bodySmall!.fontStyle),
+                    fontStyle:
+                        Theme.of(context).textTheme.bodySmall!.fontStyle),
               ),
             ),
           )
